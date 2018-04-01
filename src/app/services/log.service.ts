@@ -36,5 +36,7 @@ export class LogService {
 	 setFormLog(log: Log) {
 		 this.logSource.next(log);
 	 }
-
+	 addLog(log: Log) {
+		 console.log('addLog works')
+	 }
 }
