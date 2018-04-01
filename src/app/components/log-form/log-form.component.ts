@@ -9,12 +9,20 @@ import { Log } from '../../models/Log';
   styleUrls: ['./log-form.component.css']
 })
 export class LogFormComponent implements OnInit {
-
+	id: string;
+	text: string;
+	date: any;
   constructor(private logService: LogService) { }
 
   ngOnInit() {
 		//Subscribe to the selectedLog observable
 		this.logService.selectedLog.subscribe(log => {
+		// If statement to know if the log title was clicked
+		if(log.id !== null) {
+			this.id = log.id;
+			this.text = log.text;
+			this.date = log.date;
+		}
 		console.log(log);
 	})
   }
