@@ -30,7 +30,7 @@ export class LogService {
 			}
 		]
 	 }
-	 getLogs(): Observable<Log>[] {
+	 getLogs(): Observable<Log[]> {
 		 return of(this.logs);
 	 }
 	 setFormLog(log: Log) {
