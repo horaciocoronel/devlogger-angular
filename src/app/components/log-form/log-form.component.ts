@@ -50,7 +50,19 @@ export class LogFormComponent implements OnInit {
 			// Update Log
 			this.logService.updateLog(updLog)
 		}
+
+		// Clear State
+		this.clearState();
 	}
+
+	clearState() {
+		// Set isNew to True
+		this.isNew = true;
+		this.id = '';
+		this.text = '';
+		this.date = '';
+	}
+
 
 // Generate an RFC4122 version 4 compliant UUID
 	generateId() {
