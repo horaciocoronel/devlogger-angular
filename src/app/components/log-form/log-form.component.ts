@@ -29,6 +29,7 @@ export class LogFormComponent implements OnInit {
 		}
 	});
   }
+	// Handles what happens when the user clicks the 'Add Log button'
 	onSubmit() {
 		// Check if new log
 		if(this.isNew) {
@@ -51,6 +52,7 @@ export class LogFormComponent implements OnInit {
 		}
 	}
 
+// Generate an RFC4122 version 4 compliant UUID
 	generateId() {
 		return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
     var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
